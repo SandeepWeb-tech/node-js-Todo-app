@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add items to a list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel='Stylesheet' href='public/style.css' /> -->
+    <link rel="Stylesheet" href="style.css" />
+  </head>
+  <body>
+    <%- include('navbar') %>
+    <div class="container">
+      <h1>Lists items to your list</h1>
+
+      <% results.forEach(ele => { %>
+      <p><%= ele.name %></p>
+      <p><%= ele.content %></p>
+      <a href="/delete/<%= ele._id %>"><%= ele._id %></button>
+      <a href="/update/<%= ele._id %>"><%= ele._id %>update</button>
+      <% }) %>
+
+    </div>
+  </body>
+</html>

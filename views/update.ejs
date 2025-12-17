@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add items to a list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <%- include('navbar') %>
+    <div class="container">
+      <h1>Update items to your list</h1>
+      <form action="/update/<%= results._id %>" method="post">
+        <input
+          id="itemInput"
+          name="name"
+          type="text"
+          value="<%= results.name %>"
+          placeholder="Type an item..."
+          aria-label="Item to add"
+        />
+        <textarea name="content"><%= results.content %></textarea>
+        <button id="addBtn">Update</button>
+      </form>
+    </div>
+  </body>
+</html>
