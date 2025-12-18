@@ -12,12 +12,19 @@
     <div class="container">
       <h1>Lists items to your list</h1>
 
-      <% results.forEach(ele => { %>
-      <p><%= ele.name %></p>
-      <p><%= ele.content %></p>
-      <a href="/delete/<%= ele._id %>"><%= ele._id %></button>
-      <a href="/update/<%= ele._id %>"><%= ele._id %>update</button>
+      <div class="listing">
+
+        <% results.forEach(ele => { %>
+      <div class="list-div">
+        <p class="title"><%= ele.name %></p>
+      <p class="contant"><%= ele.content %></p>
+      </div>
+      <div class="btn-div">
+        <a href="/delete/<%= ele._id %>" class="delete">Delete</button>
+      <a href="/update/<%= ele._id %>" class="update">Update</button>
+      </div>
       <% }) %>
+      </div>
 
     </div>
   </body>
